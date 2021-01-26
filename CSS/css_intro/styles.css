@@ -1,0 +1,30 @@
+.container {
+    width: 970px;
+    margin: auto;
+}
+
+li {
+    /* any rules that i put in these curly braces will be applied to all html elements of type li */
+    color: green;
+}
+
+ul {
+    /* display: inline-block; */
+    width: 440px;
+}
+
+.red-text {
+    color: #dd0000;
+    font-style: italic;
+}
+
+#my-header {
+    color: purple;
+    font-style: italic;
+    text-shadow: 2px 2px black;
+    text-align: center;
+}
+
+.lists-section {
+    display: flex;
+}
