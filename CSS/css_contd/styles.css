@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: 1px dotted red;
+}
+
+h2 {
+    text-align: center;
+}
+
+#container {
+    width: 970px;
+    margin: auto;
+}
+
+.box {
+    width: 480px;
+    /* height: 150px; */
+    display: inline-block;
+    /* overflow: auto; */
+}  
+
+    .box p {
+        text-align: justify;
+        height: 200px;
+        overflow: auto; 
+    }
+
+.red-text {
+    color: red;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.p-1 {
+    padding: 10px;
+}
+.p-2 {
+    padding: 20px;
+}
+
+ul li a span {
+    color: green;
+    text-decoration: none;
+}
+
+.details li {
+    margin: 5px 10px 20px 40px; /* starting at the top, going clockwise, you can apply different margin on each side */
+}
