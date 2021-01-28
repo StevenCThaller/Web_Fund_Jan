@@ -49,3 +49,8 @@ ul li a span {
 .details li {
     margin: 5px 10px 20px 40px; /* starting at the top, going clockwise, you can apply different margin on each side */
 }
+
+.box-2 {
+
+    margin: auto;
+}
