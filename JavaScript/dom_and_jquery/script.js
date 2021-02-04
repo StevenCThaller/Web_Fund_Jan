@@ -5,7 +5,7 @@ $(document).ready(function(){
         $("#to_change_red").addClass("red-text");
 
 
-        $("#change_red").addClass("red-text bold-text");
+        $(this).addClass("red-text bold-text");
     });
 
     $("#delete_button").click(function(){
@@ -20,7 +20,15 @@ $(document).ready(function(){
         })
     });
 
+    $(".special").click(function(){
+        $(this).text("aha!")
+    })
     
+    $("#secret_button").click(function(){
+        if($("#password").val().length < 8){
+            alert("Your password must be at least 8 characters long!");
+        }
+    })
 
     // $(document).on('click', '.new_list', function(){
     //     alert("you clicked the ipsum");
