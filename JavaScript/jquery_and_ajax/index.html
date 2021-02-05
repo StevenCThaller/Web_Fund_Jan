@@ -8,6 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
+            var searchCounter = 0;
+            
             function getPokemon(pokemon){
                 $.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
                     .then(response => {
@@ -26,8 +28,15 @@
             }
             
             $("#go").click(function(){
-                getPokemon($("#pokeSearch").val())
-                $("#pokeSearch").val('');
+                if(searchCounter == 0) {
+                    searchCounter++;
+                    // do the thing you want to do the first time it's clicked
+                } else {
+                    getPokemon($("#pokeSearch").val())
+                    $("#pokeSearch").val('');
+                    searchCounter++;
+                    $("#search-count").text(searchCounter);
+                }
             })
 
         })
@@ -39,6 +48,7 @@
         <input type="text" name="pokeSearch" id="pokeSearch">
         <button id="go">Search</button>
     </div>
+    <p id="search-count">0</p>
     <h2 id="pokemon">Pikachu - #<span id="dexNum">25</span></h2>
     <div class="flex-row">
         <img id="pokePic" src="https://i.redd.it/ig5u8ke5qo421.png" alt="Picture of Pikachu">

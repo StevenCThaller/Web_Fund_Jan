@@ -9,6 +9,10 @@
                 1px 1px 0 blue;
 }
 
+#search-count::before{
+    content: "Number of Times Searched: "
+}
+
 #pokePic {
     width: 500px;
     height: auto;
